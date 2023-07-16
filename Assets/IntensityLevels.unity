@@ -477,6 +477,11 @@ Prefab:
       propertyPath: colorblindText
       value: 
       objectReference: {fileID: 1282792029}
+    - target: {fileID: 114137168044722458, guid: 219f0fc03b327aa4799db21ccfc3aad9,
+        type: 2}
+      propertyPath: RequiresTimerVisibility
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 219f0fc03b327aa4799db21ccfc3aad9, type: 2}
   m_IsPrefabParent: 0
