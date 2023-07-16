@@ -1,0 +1,10 @@
+{
+  "name": "intensityLevels-Editor",
+  "references": [
+    "intensityLevels"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
