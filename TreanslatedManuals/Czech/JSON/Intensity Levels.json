@@ -1,0 +1,16 @@
+{
+  "Author": "Cirax856",
+  "Compatibility": "Compatible",
+  "DefuserDifficulty": "Easy",
+  "Description": "Select a correct intensity and press the button at the correct time to solve the module.",
+  "ExpertDifficulty": "Medium",
+  "ModuleID": "intensityLevels",
+  "Name": "Intensity Levels",
+  "Origin": "Mods",
+  "Published": "2023-07-16",
+  "SortKey": "INTENSITYLEVELS",
+  "SourceUrl": "https://github.com/Cirax856/Intensity-Levels",
+  "SteamID": "3005461488",
+  "Symbol": "Il",
+  "Type": "Regular"
+}

@@ -259,28 +259,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1028278474 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1776880232237158, guid: 219f0fc03b327aa4799db21ccfc3aad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 2007503249}
---- !u!114 &1028278475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1028278474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1cfb889a07d5fd4e9baed7960bb397f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colorblindMode: 0
---- !u!4 &1028278480 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4809081560753854, guid: 219f0fc03b327aa4799db21ccfc3aad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 2007503249}
 --- !u!1 &1174799459
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,91 +321,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1282792027
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1282792028}
-  - component: {fileID: 1282792030}
-  - component: {fileID: 1282792029}
-  m_Layer: 0
-  m_Name: ColorblindText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1282792028
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282792027}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.001, y: 0.0164, z: 0.0455}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1028278480}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!102 &1282792029
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282792027}
-  m_Text: 
-  m_OffsetZ: 0
-  m_CharacterSize: 0.03
-  m_LineSpacing: 1
-  m_Anchor: 4
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 500
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 41abad553d260da499b23646bbe928e4, type: 3}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
---- !u!23 &1282792030
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282792027}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 226a317ef4610c340abbf50ca10d582a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1001 &2007503249
 Prefab:
   m_ObjectHideFlags: 0
@@ -466,21 +359,6 @@ Prefab:
     - target: {fileID: 4809081560753854, guid: 219f0fc03b327aa4799db21ccfc3aad9, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114213270197882040, guid: 219f0fc03b327aa4799db21ccfc3aad9,
-        type: 2}
-      propertyPath: colorblindMode
-      value: 
-      objectReference: {fileID: 1028278475}
-    - target: {fileID: 114213270197882040, guid: 219f0fc03b327aa4799db21ccfc3aad9,
-        type: 2}
-      propertyPath: colorblindText
-      value: 
-      objectReference: {fileID: 1282792029}
-    - target: {fileID: 114137168044722458, guid: 219f0fc03b327aa4799db21ccfc3aad9,
-        type: 2}
-      propertyPath: RequiresTimerVisibility
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 219f0fc03b327aa4799db21ccfc3aad9, type: 2}

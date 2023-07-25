@@ -72,7 +72,7 @@ public class IntensityLevels : MonoBehaviour
 	static int moduleIdCounter = 1;
 	int moduleId;
 
-	void Awake()
+	void Start()
 	{
 		moduleId = moduleIdCounter++;
 
@@ -213,6 +213,7 @@ public class IntensityLevels : MonoBehaviour
 		goalTime = (a + 1) % 10;
 
 		// logging
+		Debug.LogFormat("[Intensity Levels #{0}] Button color is {1}", moduleId, colors[colorIndex].ToLower());
 		Debug.LogFormat("[Intensity Levels #{0}] x = {1}", moduleId, x);
 		Debug.LogFormat("[Intensity Levels #{0}] y = {1}", moduleId, y);
 		Debug.LogFormat("[Intensity Levels #{0}] z = {1}", moduleId, z);
@@ -284,7 +285,13 @@ public class IntensityLevels : MonoBehaviour
 
 	private void enableColorblind()
 	{
-		colorblindText.text = colors[colorIndex][0].ToString();
+		if (colors[colorIndex] == "Black")
+		{
+			colorblindText.text = "K";
+		} else
+		{
+            colorblindText.text = colors[colorIndex][0].ToString();
+        }
 	}
 
 	private void disableColorblind()
