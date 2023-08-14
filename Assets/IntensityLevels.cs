@@ -237,7 +237,7 @@ public class IntensityLevels : MonoBehaviour
 			string editedUp = command.Remove(0, 2);
 			int amount = 1;
 			if((editedUp.Length == 2) && (!(char.IsDigit(editedUp[1])) || ((editedUp[1] - '0') < 0))) {
-				yield return "sendtochaterror Please input how many levels up you want to go, or input no argument if you want to go up by 1.";
+				yield return "sendtochaterror!h Please input how many levels up you want to go, or input no argument if you want to go up by 1.";
 			} else if(editedUp.Length == 2) {
 				amount = editedUp[1] - '0';
 			}
