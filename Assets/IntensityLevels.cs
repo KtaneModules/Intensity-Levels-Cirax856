@@ -250,7 +250,7 @@ public class IntensityLevels : MonoBehaviour
 			string editedDown = command.Remove(0, 4);
 			int amount = 1;
 			if((editedDown.Length == 2) && (!(char.IsDigit(editedDown[1])) || ((editedDown[1] - '0') < 0))) {
-				yield return "sendtochaterror Please input how many levels down you want to go, or input no argument if you want to go down by 1.";
+				yield return "sendtochaterror!h Please input how many levels down you want to go, or input no argument if you want to go down by 1.";
 			} else if(editedDown.Length == 2) {
 				amount = editedDown[1] - '0';
 			}
@@ -262,8 +262,9 @@ public class IntensityLevels : MonoBehaviour
 		} else if(command.StartsWith("submit")) {
 			string timePress = command.Remove(0, 6);
 			if((timePress.Length != 2) || !(char.IsDigit(timePress[1])) || ((timePress[1] - '0') < 0)) {
-				yield return "sendtochaterror Please input the last seconds digit of the timer you want to press the button on.";
+				yield return "sendtochaterror!h Please input the last seconds digit of the timer you want to press the button on.";
 			} else {
+				yield return null;
 				timePress = timePress.Remove(0, 1);
 				while((Mathf.Floor(bombInfo.GetTime()) % 10) != (timePress[0] - '0')) {
 					yield return "trycancel";
@@ -271,6 +272,7 @@ public class IntensityLevels : MonoBehaviour
 				ButtonPress();
 			}
 		} else if(command.StartsWith("colorblind")) {
+			yield return null;
 			if(isColorblind == false)
 			{
 				enableColorblind();
