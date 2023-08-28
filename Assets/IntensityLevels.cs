@@ -244,7 +244,7 @@ public class IntensityLevels : MonoBehaviour
 			yield return null;
 			for(int i = 0; i < amount; i++) {
 				yield return null;
-				ArrowPress(0);
+				arrows[0].OnInteract();
 			}
 		} else if(command.StartsWith("down")) {
 			string editedDown = command.Remove(0, 4);
@@ -257,7 +257,7 @@ public class IntensityLevels : MonoBehaviour
 			yield return null;
 			for(int i = 0; i < amount; i++) {
 				yield return null;
-				ArrowPress(1);
+				arrows[1].OnInteract();
 			}
 		} else if(command.StartsWith("submit")) {
 			string timePress = command.Remove(0, 6);
@@ -269,7 +269,7 @@ public class IntensityLevels : MonoBehaviour
 				while((Mathf.Floor(bombInfo.GetTime()) % 10) != (timePress[0] - '0')) {
 					yield return "trycancel";
 				}
-				ButtonPress();
+				button.OnInteract();
 			}
 		} else if(command.StartsWith("colorblind")) {
 			yield return null;
@@ -300,4 +300,26 @@ public class IntensityLevels : MonoBehaviour
 	{
 		colorblindText.text = "";
 	}
+
+	private IEnumerator TwitchHandleForcedSolve()
+	{
+		for(int i = 0; i < intensityLevel; i++)
+		{
+			yield return null;
+			arrows[1].OnInteract();
+			yield return new WaitForSeconds(0.05f);
+		}
+		
+		for(int i = 0; i < goalIntensity; i++)
+		{
+			yield return null;
+			arrows[0].OnInteract();
+			yield return new WaitForSeconds(0.05f);
+		}
+
+		yield return new WaitForSeconds(0.1f);
+
+        goalTime = (int)Mathf.Floor(bombInfo.GetTime()) % 10;
+		button.OnInteract();
+    }
 }
